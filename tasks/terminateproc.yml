@@ -1,0 +1,8 @@
+---
+    - name: To cancel the Process for Database Backup
+      dsmadmc:
+        command: " cancel process {{ item }} "
+        se: "{{ lookup('csvfile', 'Server file=credentials.csv delimiter=,') }}"
+        id: "{{ lookup('csvfile', 'ID file=credentials.csv delimiter=,') }}"
+        pa: "{{ lookup('csvfile', 'Password file=credentials.csv delimiter=,') }}"
+      loop: "{{ proc_num }}"

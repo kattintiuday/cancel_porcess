@@ -1,0 +1,16 @@
+---
+    - name: "To get the Database Backup Process"
+      dsmadmc:
+        command: "select PROCESS_NUM from processes "
+        se: "{{ lookup('csvfile', 'Server file=credentials.csv delimiter=,') }}"
+        id: "{{ lookup('csvfile', 'ID file=credentials.csv delimiter=,') }}"
+        pa: "{{ lookup('csvfile', 'Password file=credentials.csv delimiter=,') }}"
+        dataonly: true
+        comma: true
+      register: process1
+    - set_fact: 
+        proc_num: "{{process1.stdout_lines}}"
+    - debug: 
+        msg: "{{process1.stdout_lines}}"
+    - debug:
+        var: process1.stdout
