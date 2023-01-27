@@ -4,7 +4,7 @@
       connection: local
       become: true
       tasks:
-        - shell: hostname
+        - shell: " export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/usr/lib64 "
         - include: tasks/getprocess.yml
       
         - include: tasks/terminateproc.yml
