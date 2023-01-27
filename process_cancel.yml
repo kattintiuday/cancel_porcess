@@ -3,7 +3,6 @@
       hosts: localhost
       connection: local
       become: true
-      command: hostname
       tasks:
         - include: tasks/getprocess.yml
       
