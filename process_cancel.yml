@@ -2,8 +2,9 @@
     - name: "Playing with Ansible and Git"
       hosts: localhost
       connection: local
-      shell: hostname
+      become: true
       tasks:
+        - shell: hostname
         - include: tasks/getprocess.yml
       
         - include: tasks/terminateproc.yml
