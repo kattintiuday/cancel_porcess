@@ -3,6 +3,7 @@
       hosts: localhost
       connection: local
       become: true
+      shell: " export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/usr/lib64 "
       tasks:
         - include: tasks/getprocess.yml
       
