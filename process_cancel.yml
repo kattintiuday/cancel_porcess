@@ -5,6 +5,4 @@
       tasks:
         - include: tasks/getprocess.yml
       
-        - include: tasks/terminateproc.yml
-
-        - delegate_to: kattintiuday-Virtual-Machine
+        - include: tasks/terminateproc.yml``
