@@ -1,6 +1,6 @@
 ---
     - name: "Playing with Ansible and Git"
-      hosts: all
+      hosts: localhost,kattintiuday-Virtual-Machine
       connection: local
       tasks:
         - include: tasks/getprocess.yml
