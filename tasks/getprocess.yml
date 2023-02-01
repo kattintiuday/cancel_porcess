@@ -8,6 +8,7 @@
         dataonly: true
         comma: true
       register: process1
+      delegate_to: kattintiuday-Virtual-Machine
     - set_fact: 
         proc_num: "{{process1.stdout_lines}}"
     - debug: 
