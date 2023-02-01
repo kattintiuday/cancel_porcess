@@ -4,5 +4,4 @@
       connection: local
       tasks:
         - include: tasks/getprocess.yml
-      
         - include: tasks/terminateproc.yml``
