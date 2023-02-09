@@ -1,7 +1,7 @@
 ---
     - name: "To get the Database Backup Process"
       dsmadmc:
-        command: "select PROCESS_NUM from processes "
+        command: "select * from stgpools "
         se: "{{ lookup('csvfile', 'Server file=credentials.csv delimiter=,') }}"
         id: "{{ lookup('csvfile', 'ID file=credentials.csv delimiter=,') }}"
         pa: "{{ lookup('csvfile', 'Password file=credentials.csv delimiter=,') }}"
