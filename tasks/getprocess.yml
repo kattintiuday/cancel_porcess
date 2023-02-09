@@ -1,7 +1,7 @@
 ---
     - name: "To get the Database Backup Process"
       dsmadmc:
-        command: " select * from stgpools "
+        command: " select PROCESS_NUM from processes  "
         se: "{{ tsm_server_node }}"
         id: "{{ tsm_app_user }}"
         pa: "{{ tsm_app_password }}"
