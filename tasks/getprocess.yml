@@ -2,9 +2,9 @@
     - name: "To get the Database Backup Process"
       dsmadmc:
         command: "select PROCESS_NUM from processes "
-        se: "{{ lookup('csvfile', 'Server file=credentials.csv delimiter=,') }}"
-        id: "{{ lookup('csvfile', 'ID file=credentials.csv delimiter=,') }}"
-        pa: "{{ lookup('csvfile', 'Password file=credentials.csv delimiter=,') }}"
+        se: "{{ tsm_server_node }}"
+        id: "{{ tsm_app_user }}"
+        pa: "{{ tsm_app_password }}"
         dataonly: true
         comma: true
       register: process1
