@@ -2,9 +2,9 @@
     - name: "To get the Database Backup Process"
       dsmadmc:
         command: " select * from stgpools "
-        se: "{{ tsm_server_node }}"
-        id: "{{ tsm_app_user }}"
-        pa: "{{ tsm_app_password }}"
+        se: "{{ 'tsm_server_node' }}"
+        id: "{{ 'tsm_app_user' }}"
+        pa: "{{ 'tsm_app_password' }}"
         dataonly: true
         comma: true
       register: process1
