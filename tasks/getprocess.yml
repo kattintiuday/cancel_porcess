@@ -1,7 +1,7 @@
 ---
     - name: "To get the Database Backup Process"
       dsmadmc:
-        command: " select PROCESS_NUM from processes  "
+        command: " select PROCESS_NUM from processes where (PROCESS='Space Reclamation' or PROCESS='Backup Storage Pool' or PROCESS='Move Data') "
         se: "{{ tsm_server_node }}"
         id: "{{ tsm_app_user }}"
         pa: "{{ tsm_app_password }}"
