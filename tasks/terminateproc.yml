@@ -2,7 +2,7 @@
     - name: To cancel the Process for Database Backup
       dsmadmc:
         command: " cancel process {{ item }} "
-        se: "{{ tsm_server_node }}"
-        id: "{{ tsm_app_user }}"
-        pa: "{{ tsm_app_password }}"
+        se: "{{ lookup('env', 'tsm_server_node') }}"
+        id: "{{ lookup('env', 'tsm_app_user') }}"
+        pa: "{{ lookup('env', 'tsm_app_password') }}"
       loop: "{{ proc_num }}"
